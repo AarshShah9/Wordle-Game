@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="spacer"></div>
+      <h1>Wordle</h1>
+      <div class="menu">
+        <ul id="nav-ul">
+          <li id="dark" class="menu_item">&#9681;</li>
+          <li id="info" class="menu_item">&#63;</li>
+          <li id="more-info" class="menu_item">&#9432;</li>
+        </ul>
+      </div>
+    </header>
+    <section id="game-section">
+      <div id="board"></div>
+      <div id="img-wrapper">
+        <img
+          id="congrats"
+          src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif"
+        />
+      </div>
+
+      <div class="button-wrapper">
+        <button type="button" class="button" id="start-over-button">
+          Start Over
+        </button>
+      </div>
+    </section>
+    <section id="more-info-section">
+      <div class="left-section">
+        <div id="fake-board"></div>
+        <div class="button-wrapper">
+          <button type="button" class="button" id="start-over">
+            Start Over
+          </button>
+        </div>
+      </div>
+      <div class="right-section">
+        <h3>How To Play</h3>
+        <ul>
+          <li>Start typing. The letters will appear in the boxes</li>
+          <li>Remove letters with Backspace</li>
+          <li>Hit Enter/Return to submit an answer</li>
+          <li>Letters with green background are in the right spot</li>
+          <li>
+            Letters with green background exist in the word, but are in the
+            wrong spot
+          </li>
+          <li>Letters with gray background do not exist in the word</li>
+          <li>If you need a hint, click the &#63; icon</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer-wrapper">
+      <div id="game-section2">
+        <div id="win-alert">
+          <p>You guessed the word&nbsp;</p>
+          <p><b id="correct-word1"></b></p>
+          <p>&nbsp;correctly!</p>
+        </div>
+
+        <div id="lose-alert">
+          <p>You missed the word&nbsp;</p>
+          <p><b id="correct-word2"></b></p>
+          <p>&nbsp;and lost!</p>
+        </div>
+
+        <div id="info-alert">
+          <i id="hint1">Hint:&nbsp</i>
+          <p id="hint"></p>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; Aarsh Shah</p>
+      </footer>
+    </div>
+
+    <script src="./wordle.js"></script>
+  </body>
+</html>

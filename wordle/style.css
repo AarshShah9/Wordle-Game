@@ -1,0 +1,285 @@
+:root {
+  --bordergrey: rgb(214, 222, 230);
+  --green: #94ac88;
+  --grey: #787474;
+  --bordergrey: rgb(216, 216, 217);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  header stuff */
+header {
+  border-top: 4px solid var(--green);
+  border-bottom: 1px solid var(--bordergrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_item {
+  display: inline-block;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.menu {
+  flex: 1;
+  text-align: right;
+  padding-right: 15px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav-item a {
+  color: var(--grey);
+  font-size: 1.1em;
+}
+
+.menu_item:hover {
+  background-color: #f0ecec;
+}
+
+.dark-mode-menu:hover {
+  background-color: #5a5757;
+}
+
+.dark-mode-tile {
+  color: white;
+  background-color: #201c1c;
+}
+/* body */
+
+#more-info-section {
+  display: none;
+  flex-grow: 1;
+}
+
+#more-info-section h3 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  padding-left: 25px;
+}
+
+#more-info-section li {
+  padding-top: 10px;
+  list-style-type: circle;
+}
+
+.left-section {
+  /* flex-grow: 1; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--bordergrey);
+}
+
+.right-section {
+  padding-top: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dark-mode {
+  background-color: #201c1c;
+  color: white;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  font-size: 1.1em;
+
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  margin: 2px #fdfffd;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.dark-mode-text {
+  color: white;
+}
+
+.light-mode-text {
+  color: black;
+}
+
+/* Actual game css */
+
+#board {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#fake-board {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile {
+  /* Box */
+  border: 2px solid lightgray;
+  width: 60px;
+  height: 60px;
+  margin: 2.5px;
+
+  /* Text */
+  /* color: black; */
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  border: 2px solid var(--bordergrey);
+}
+
+.correct-position {
+  /* border: 2px solid var(--green); */
+  background-color: #6aaa64;
+  color: white;
+  border-color: white;
+}
+
+.correct {
+  background-color: #c9b458;
+  color: white;
+  border-color: white;
+}
+
+.incorrect {
+  background-color: #787c7e;
+  color: white;
+  border-color: white;
+}
+
+#img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#congrats {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#selected {
+  border: 2px solid rgb(41, 41, 41);
+}
+
+/* footer */
+
+#info-alert {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff4e4;
+}
+
+#lose-alert {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #f01c1c;
+  color: white;
+}
+
+#win-alert {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #949890;
+  color: rgb(15, 14, 14);
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}
+
+footer {
+  border-top: 1px solid var(--bordergrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  padding-top: 20px;
+}
